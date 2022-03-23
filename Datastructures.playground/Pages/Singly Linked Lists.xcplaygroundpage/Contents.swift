@@ -192,7 +192,11 @@ struct LinkedList<T> {
         // return if the list is empty (because there isnt anything to remove)
         guard let head = head else { return nil }
         // if there is just one node, that would mean head.next == nil, so we could use pop
-        guard head.next != nil else { return pop() }
+        guard head.next != nil else {
+            self.head = nil
+            self.tail = nil
+            return nil
+        }
         
         var newTail = head
         var currentNode = head
@@ -294,8 +298,7 @@ var list = LinkedList<Any>()
 list.append(1)
 list.append(3)
 list.insert(data: 2, at: 1)
-
-// PRINTS:
-// [1]
-// [1, 3]
-// [1, 2, 3]
+list.removeLast()
+list.removeLast()
+list.removeLast()
+list.tail
