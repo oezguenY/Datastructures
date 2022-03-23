@@ -7,5 +7,9 @@
         <page name='Queues'/>
         <page name='Binary Search Trees'/>
         <page name='BST Practice'/>
+        <page name='Tree Traversal'/>
+        <page name='DFS'/>
+        <page name='DFS Practice'/>
+        <page name='Recap'/>
     </pages>
 </playground>
